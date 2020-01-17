@@ -3,11 +3,6 @@ require 'rails_helper'
 describe Review do
   it { should belong_to(:product) }
   it { should validate_numericality_of(:rating)}
-
-  # it do
-  #   should validate_numericality_of(:rating).
-  #     is_greater_than_or_equal_to(1)
-  # end
   it ( "creates a new review") do
     review = Review.create({author: "Johnny", content_body: "this is the content body, it has to be more than fifty charactors and less than two hundred and fifty, this is about long enough", rating: "4" })
     expect(review.author).to(eq("Johnny"))
