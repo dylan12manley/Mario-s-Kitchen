@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Division.new
+    @product = Product.new
     render :new
   end
 
