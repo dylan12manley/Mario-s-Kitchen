@@ -1,0 +1,24 @@
+<h1>Products</h1>
+
+<% if @products.any? %>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products yet.</p>
+<% end %>
+
+
+<p><%= link_to "Create new product", new_product_path %></p>
+
+<% if @reviews.any? %>
+  <ul>
+    <% @reviews.each do |review| %>
+      <li><%= link_to review.author, review_path(review) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no reviews yet.</p>
+<% end %>
