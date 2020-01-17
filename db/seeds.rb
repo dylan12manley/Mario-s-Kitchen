@@ -16,6 +16,7 @@ end
 end
 
 p "Created #{Product.count} products"
+
 # 250.times do |index|
 #   Review.create!(author: Faker::Artist.name,
 #                 content_body: Faker::Lorem.paragraph(sentence_count: 7, supplemental: true),
