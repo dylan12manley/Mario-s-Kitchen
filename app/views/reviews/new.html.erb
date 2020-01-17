@@ -1,6 +1,6 @@
 <h2>Add a New Review</h2>
 
-<%= form_for [@review, @product] do |f| %>
+<%= form_for [@product, @review] do |f| %>
   <%= f.label :author %>
   <%= f.text_field :author %>
   <%= f.label :content_body %>
