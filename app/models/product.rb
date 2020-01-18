@@ -1,7 +1,13 @@
 class Product < ApplicationRecord
-  # scope :most_reviews, -> { where(product_id: id) }
-  # scope :most_recent, -> { where(product_id: id) }
-  # scope :local_products, -> { where(product_id: id) }
+  scope :most_reviews, -> {(
+    select("products.id, products.name, count(review.id) as review_count")
+    .joins(:review)
+    .group("products.id")
+    .order("tasks_count DESC")
+    .limit(1)
+    )}
+  scope :most_recent, -> { order(created_at: :desc).limit(3)}
+  scope :local_products, -> { where(country_of_origin: "USA") }
   has_many :reviews, dependent: :destroy
   validates :name, presence: true
   validates :cost, presence: true
