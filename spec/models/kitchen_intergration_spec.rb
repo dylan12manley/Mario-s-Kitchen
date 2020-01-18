@@ -41,6 +41,6 @@ describe('create a review path', {:type => :feature}) do
     fill_in('Content body', :with => 'this is the content body this is the content body this is the content body this is the content body this is the content body this is the content body this is the content body this is the content body')
     fill_in('Rating', :with => "4")
     click_on('Create Review')
-    expect(page).to have_content('timmy')
+    expect(page).to have_content('Review successfully created.')
   end
 end
