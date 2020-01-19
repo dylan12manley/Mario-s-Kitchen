@@ -1,8 +1,8 @@
 class Product < ApplicationRecord
   scope :most_reviews, -> {(
-    select("products.id, products.name, count(review.id) as review_count")
+    select("product.id, product.name, count(review.id) as review_count")
     .joins(:review)
-    .group("products.id")
+    .group("product.id")
     .order("tasks_count DESC")
     .limit(1)
     )}

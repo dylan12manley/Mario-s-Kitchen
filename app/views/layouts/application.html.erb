@@ -10,17 +10,17 @@
   </head>
 
   <body>
-    <div class="row headers">
+    <div class="headers">
       <div class="headersEffect">
 
       <h1 class="mainHeader">Tim's Kitchen: Products</h1>
     </div>
     </div>
-    <div class="row">
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
+    <div id="flashes">
+    <h5 class="flashText"><%= flash[:alert] %></h5>
+    <h5 class="flashText"><%= flash[:notice] %></h5>
+  </div>
 
     <%= yield %>
-    </div>
   </body>
   </html>

@@ -1,20 +1,41 @@
 <div class="headersEffect">
-<div class="row headers">
-      <h3 class="seccondHeader">We're a local farm to kitchen ingredient store<br>Founded by a retired sailer in 2014</h3>
+  <div class="headers">
+    <h3 class="seccondHeader">We're a local farm to kitchen ingredient store<br>Founded by a retired sailer in 2014</h3>
+  </div>
 </div>
-</div>
-<div class="listHeader">
-  <p><%= link_to "Create new product", new_product_path %></p>
-  <h2>Products</h2>
-</div>
+    <div class="listHeader">
+      <p><%= link_to "Create new product", new_product_path %></p>
+      <h2>Products Currently Available</h2>
+    </div>
     <% if @products.any? %>
-  <ul>
-      <% @products.each do |product| %>
-   <div class="sideBar">
-    <li><%= link_to product.name, product_path(product) %></li>
-   </div>
+    <div class="row">
+    <div class="sideBar">
+      <ul>
+        <% @products.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+        <% end %>
+      </ul>
+    </div>
+  <div class="column-5">
+    <div class="scopes">
+      <h3>Product with the Most Reviews</h3>
+      <% most_reviews = @products.most_reviews %>
+      <%= link_to most_reviews.name, product_path(most_reviews) %>
+      <h3>Three Most Recently Added Products</h3>
+      <% most_recent = @products.most_recent %>
+      <% most_recent.each do |recent_product| %>
+      <li><%= link_to recent_product.name, product_path(recent_product) %></li>
       <% end %>
-  </ul>
+      <h3>All of the Local Products<br>(from the USA)</h3>
+      <% local_products = @products.local_products %>
+      <% local_products.each do |local_product| %>
+      <li> <%= link_to local_product.name, product_path(local_product) %></li>
+      <% end %>
+    </div>
+  </div>
+</div>
     <% else %>
-  <p>There are no products yet.</p>
+    <p>There are no products yet.</p>
     <% end %>
+
+</div>
