@@ -1,20 +1,20 @@
-<div class="row">
-  <h1>Mario's Kitchen</h1>
-  <h3>We're a local farm to table ingredient store,<br>founded by a retired plummer in 2014</h3>
+<div class="headersEffect">
+<div class="row headers">
+      <h3 class="seccondHeader">We're a local farm to kitchen ingredient store<br>Founded by a retired sailer in 2014</h3>
 </div>
-
-<div class="row">
+</div>
+<div class="listHeader">
+  <p><%= link_to "Create new product", new_product_path %></p>
   <h2>Products</h2>
-
-  <% if @products.any? %>
-  <ul>
-    <% @products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
-  <% else %>
-  <p>There are no products yet.</p>
-  <% end %>
 </div>
-
-<p><%= link_to "Create new product", new_product_path %></p>
+    <% if @products.any? %>
+  <ul>
+      <% @products.each do |product| %>
+   <div class="sideBar">
+    <li><%= link_to product.name, product_path(product) %></li>
+   </div>
+      <% end %>
+  </ul>
+    <% else %>
+  <p>There are no products yet.</p>
+    <% end %>

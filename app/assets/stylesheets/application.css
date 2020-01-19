@@ -13,3 +13,64 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   padding: 2em 7em;
+   background: rgb(121,93,157);
+   background: linear-gradient(90deg, rgba(121,93,157,1) 2%, rgba(237,201,206,1) 9%, rgba(237,201,206,1) 87%, rgba(105,78,140,1) 99%);
+   color: 293031;
+   max-width: 1000px;
+ }
+ li {
+   list-style-type: none
+ }
+.headers {
+   max-width: 940px;
+   background: linear-gradient(90deg, rgba(121,93,157,1) 1%, #D0B8EF 4%, #D0B8EF 96%, rgba(105,78,140,1) 99%);
+   padding: 0.8em 2em;
+   text-align: center;
+}
+.headersEffect { background: linear-gradient(0deg, #e8f6c6 1%, #D0B8EF 4%, #D0B8EF 96%, #e8f6c6 99%);
+  padding: 0.8em .6em;
+}
+.listHeader {
+  width: 16em;
+  padding-left: 13vw;
+  min-height: 30px;
+}
+.main {
+  padding-right: 1em;
+  margin right: 1em;
+  min-width: 1000px
+}
+.row {
+  ali
+}
+.sideBar {
+  min-width: 14.5em;
+  max-width: 22em;
+  z-index: 1;
+  top: 4em;
+  left: 3.5em;
+  background: linear-gradient(90deg,  #e8f6c6 1%, #c7b0e6 89%);
+  text-align: center;
+  padding: 4px 0;
+}
+
+.sideBar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #641ac7;
+  /* display: block; */
+}
+
+ a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #641ac7;
+  /* display: block; */
+}
+
+ a:hover {
+  color: #064579;
+}

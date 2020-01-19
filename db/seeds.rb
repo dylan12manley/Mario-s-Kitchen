@@ -1,5 +1,4 @@
 Product.destroy_all
-Review.destroy_all
 
 10.times do |index|
   Product.create!(name: Faker::Food.ingredient,
@@ -15,11 +14,13 @@ end
 
 p "Created #{Product.count} products"
 
-# 250.times do |index|
-#   Review.create!(author: Faker::Artist.name,
-#                 content_body: Faker::Lorem.paragraph(sentence_count: 7, supplemental: true),
-#                 rating: rand(5),
-#                 product_id: rand(50) )
-# end
+Review.destroy_all
 
-# p "Created #{Review.count} reviews"
+250.times do |index|
+  Review.create(author: Faker::Artist.name,
+                content_body: Faker::Lorem.paragraph(sentence_count: 7, supplemental: true),
+                rating: rand(5),
+                product_id: rand(700) )
+end
+
+p "Created #{Review.count} reviews"
