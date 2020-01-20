@@ -64,11 +64,15 @@
   min-width: 1000px
 }
 .row {
-  columns: 3;
+  columns: 2;
+}
+.scrollBar {
+  overflow: auto;
+  max-height: 775px
 }
 .sideBar {
-  width: 12.5em;
-  length: 80vw;
+  width: 18em;
+  length: 750px;
   z-index: 1;
   top: 4em;
   left: 3.5em;

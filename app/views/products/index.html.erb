@@ -5,13 +5,13 @@
     </div>
     <% if @products.any? %>
     <div class="row">
-    <div class="sideBar">
-      <ul>
+      <ul class="scrollBar">
+        <div class="sideBar">
         <% @products.each do |product| %>
-        <li><%= link_to product.name, product_path(product) %></li>
+        <li><%= link_to product.name, product_path(product) %> --- <%=number_to_currency(product.cost) %></li>
         <% end %>
+      </div>
       </ul>
-    </div>
   <div class="column-5">
     <div class="scopes">
       <h3>Three Most Recently Added Products</h3>
